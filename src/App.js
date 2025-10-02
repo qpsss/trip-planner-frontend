@@ -73,19 +73,6 @@ function App() {
     }
   };
 
-  async function fetchData() {
-    return await fetch(
-      import.meta.env.VITE_REACT_APP_TRIP_PLANNER_API_URL,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ days, country }),
-      }
-    );
-  }
-
   function fetchMockData200() {
     return new Response(JSON.stringify(myData), {
       status: 200,
